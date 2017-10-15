@@ -5,8 +5,8 @@ import sys
 def str_to_date(str_dt):
     """
     Converts string to date -- must be in YYYY-MM-DD format
-    :param dt:
-    :return:
+    :param str_dt:
+    :return: string to date
     """
 
     return datetime.datetime.strptime(str_dt, '%Y-%m-%d').date()
@@ -16,7 +16,7 @@ def check_date_valid(possible_date):
     """
     Checks if date is valid
     :param possible_date: needs to be in YYYY-MM-DD format otherwise it won't work
-    :return:
+    :return: the valid flag and the date obj
     """
 
     is_good_date = False
@@ -39,9 +39,9 @@ def check_date_valid(possible_date):
 def check_end_date_bigger(start_dt, end_dt):
     """
     Checks to see that end_dt is greater (more in the future) than start_dt
-    :param start_dt:
-    :param end_dt:
-    :return:
+    :param start_dt: date obj
+    :param end_dt: date obj
+    :return: flag
     """
 
     is_logical = False
